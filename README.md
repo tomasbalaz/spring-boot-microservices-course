@@ -14,3 +14,7 @@ mvn wrapper:wrapper
 ./mvnw clean package
 
 https://docs.spring.io/spring-boot/docs/current/reference/htmlsingle/#howto.build.generate-info
+
+
+https://springdoc.org/#Introduction
+http://localhost:8081/swagger-ui/index.html
