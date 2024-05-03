@@ -12,3 +12,5 @@ sdk install java 21.0.3-tem
 cat ~/.sdkman/etc/config
 mvn wrapper:wrapper
 ./mvnw clean package
+
+https://docs.spring.io/spring-boot/docs/current/reference/htmlsingle/#howto.build.generate-info
