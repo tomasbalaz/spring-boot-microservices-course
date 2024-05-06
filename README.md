@@ -18,3 +18,5 @@ https://docs.spring.io/spring-boot/docs/current/reference/htmlsingle/#howto.buil
 
 https://springdoc.org/#Introduction
 http://localhost:8081/swagger-ui/index.html
+
+./mvnw spotless:apply
