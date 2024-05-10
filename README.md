@@ -20,3 +20,8 @@ https://springdoc.org/#Introduction
 http://localhost:8081/swagger-ui/index.html
 
 ./mvnw spotless:apply
+
+https://taskfile.dev/
+
+go-task start_infra
+go-task stop_infra
