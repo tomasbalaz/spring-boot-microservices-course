@@ -12,14 +12,18 @@ public class ProductService {
 
     private final ProductRepository productRepository;
 
-    public ProductService(ProductRepository productRepository) {
+    private final ApplicationProperties properties;
+
+    public ProductService(ProductRepository productRepository,
+                          ApplicationProperties properties) {
         this.productRepository = productRepository;
+        this.properties = properties;
     }
 
     public PagedResult<Product> getAllProducts(int pageNo) {
         Sort sort = Sort.by(Sort.Direction.DESC, "name");
         pageNo = pageNo <= 1 ? 0 : pageNo - 1;
-        Pageable pageable = PageRequest.of(pageNo, 10, sort);
+        Pageable pageable = PageRequest.of(pageNo, properties.pageSize(), sort);
         var productsPage = productRepository.findAll(pageable)
                 .map(ProductMapper::toProduct);
 
