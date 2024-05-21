@@ -5,12 +5,12 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 import sk.balaz.bookstore.catalog.domain.PagedResult;
-import sk.balaz.bookstore.catalog.domain.ProductEntity;
+import sk.balaz.bookstore.catalog.domain.Product;
 import sk.balaz.bookstore.catalog.domain.ProductService;
 
 @RestController
 @RequestMapping("/api/products")
-public class ProductController {
+class ProductController {
 
     private final ProductService productService;
 
@@ -19,7 +19,7 @@ public class ProductController {
     }
 
     @GetMapping
-    PagedResult<ProductEntity> getProducts(@RequestParam(name = "page", defaultValue = "1") int pageNo) {
+    PagedResult<Product> getProducts(@RequestParam(name = "page", defaultValue = "1") int pageNo) {
         return productService.getAllProducts(pageNo);
     }
 }
