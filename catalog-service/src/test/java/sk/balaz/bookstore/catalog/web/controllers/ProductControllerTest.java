@@ -1,20 +1,19 @@
 package sk.balaz.bookstore.catalog.web.controllers;
 
+import static io.restassured.RestAssured.given;
+import static org.hamcrest.Matchers.hasSize;
+import static org.hamcrest.Matchers.is;
 
 import io.restassured.http.ContentType;
 import org.junit.jupiter.api.Test;
 import org.springframework.test.context.jdbc.Sql;
 import sk.balaz.bookstore.catalog.AbstractIntegrationTest;
 
-import static io.restassured.RestAssured.given;
-import static org.hamcrest.Matchers.hasSize;
-import static org.hamcrest.Matchers.is;
-
 @Sql("/test-data.sql")
 class ProductControllerTest extends AbstractIntegrationTest {
 
     @Test
-    public void shouldReturnProducts(){
+    public void shouldReturnProducts() {
 
         given().contentType(ContentType.JSON)
                 .when()
