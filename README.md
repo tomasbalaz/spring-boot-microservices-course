@@ -31,3 +31,9 @@ https://taskfile.dev/
 
 go-task start_infra
 go-task stop_infra
+
+
+
+
+./mvnw -pl catalog-service spring-boot:build-image -DskipTests
+https://docs.spring.io/spring-boot/maven-plugin/build-image.html
