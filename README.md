@@ -31,6 +31,7 @@ https://taskfile.dev/
 
 go-task start_infra
 go-task stop_infra
+go-task start
 
 
 
