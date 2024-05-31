@@ -1,4 +1,4 @@
-package sk.balaz.bookstore.catalog.web.controllers.exception;
+package sk.balaz.bookstore.catalog.web.exception;
 
 import java.net.URI;
 import java.time.Instant;
